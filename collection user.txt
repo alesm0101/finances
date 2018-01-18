@@ -1,0 +1,12 @@
+db.createCollection('users',{validator:{$and:[{'username':{$type:'string'}},{'fullName':{$type:'string'}},{'password':{$type:'string'}},{'privileges':{$type:'int'}},{'defaultCurrency':{$type:'string'}},{'username':{$exists:true}},{'password':{$exists:true}},{'email':{$exists:true}},{'defaultCurrency':{$exists:true}},{'email':{$regex:/\S+@\S+\.\S+/}}]}});
+
+db.users.insert({'username':'alesbug', 'fullName':'Alejandro Bug', 'password':'123', 'email':'alesm0101@gmail.com', 'privileges':NumberInt(1), 'defaultCurrency':'ars'})
+
+db.users.insert({'username':'alesbug', 'fullName':'Alejandro Bug', 'password':'123', 'email':'alesm0101@gmail.com', 'privileges':NumberInt(1), 'defaultCurrency':'as'})
+
+
+https://docs.mongodb.com/manual/reference/operator/query/type/
+
+https://docs.mongodb.com/manual/core/schema-validation/
+
+db.users.insert({'username':'alesbug', 'password':'123'})
