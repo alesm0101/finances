@@ -2,7 +2,7 @@
 
 A simple API rest working with mongo and express
 
-# Dependencies:
+## Dependencies:
 > to create:
 
 ```shell
@@ -19,4 +19,13 @@ npm install method-override --save-dev
 
 ```shell
 npm install
+```
+## Testing
+
+You can use restlet client for Chrome to test:
+
+> Example:
+
+```
+http://localhost:3200/api/myfinances/
 ```
