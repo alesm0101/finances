@@ -3,10 +3,14 @@
 A simple **RESTful API** working with **MongoDB, Node and Express**
 
 ## Dependencies:
-**MONGODB** -> No SQL server
-**NODE** ->  JavaScript run-time environment for executing JavaScript code server-side
-	**Mongoose** -> MongoDB validation, casting and business logic from backend
-	**Express** -> web application framework
+**MONGODB** -> No SQL server.
+
+**NODE** ->  JavaScript run-time environment for executing JavaScript code server-side.
+
+	**Mongoose** -> MongoDB validation, casting and business logic from backend.
+
+	**Express** -> web application framework.
+    
 	**Middlewares:**
 		* body-parser
 		* method-override
