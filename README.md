@@ -7,7 +7,6 @@ MONGODB -> No SQL server
 NODE ->  JavaScript run-time environment for executing JavaScript code server-side
 	mongoose -> MongoDB validation, casting and business logic from backend
 	express -> web application framework
-
 	middlewares:
 		body-parser
 		method-override
