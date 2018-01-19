@@ -1,8 +1,21 @@
-# Info
+# RESTful API with MongoDB
 
-A simple RESTful API working with mongo and express
+A simple **RESTful API** working with **MongoDB, Node and Express**
 
 ## Dependencies:
+MONGODB -> No SQL server
+NODE ->  JavaScript run-time environment for executing JavaScript code server-side
+	mongoose -> MongoDB validation, casting and business logic from backend
+	express -> web application framework
+
+	middlewares:
+		body-parser
+		method-override
+
+## Quick Start
+
+Please make sure that you have node and **mongodb** installed.
+
 > To create the package.json:
 
 ```shell
@@ -42,7 +55,7 @@ node app.js
 
 ## Testing
 
-You can use restlet client for Chrome to test using http://localhost:3200/api/myfinances/ as url:
+You can use **Restlet Client** for Chrome to test using http://localhost:3200/api/myfinances/ as url:
 
 > Example POST:
 
@@ -57,13 +70,17 @@ You can use restlet client for Chrome to test using http://localhost:3200/api/my
 }
 ```
 
-It will be create a database called 'finances' and a collection 'users'
-
+It will be create a database called 'finances' and a collection 'users'.
 To check if it is working you can call again using the method GET.
-
 
 The API has suppport to PUT to update and DELETE to remove a specific document by id.
 
-Example url:
+> Example url:
 
->  http://localhost:3200/api/myfinances/5a61e4615931560ab674fda1
+```shell
+http://localhost:3200/api/myfinances/5a61e4615931560ab674fda1
+```
+
+## Credits
+
+Diggo.cc
