@@ -5,7 +5,7 @@ var express         = require("express"),
     mongoose        = require('mongoose');
 
 // Connection to DB
-mongoose.connect('mongodb://localhost/tvshows', function(err, res) {
+mongoose.connect('mongodb://localhost/finances', function(err, res) { // here the database name is defined
   if(err) throw err;
   console.log('Connected to Database');
 });
@@ -15,37 +15,17 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(methodOverride());
 
-// Import Models and controllers
-// var models     = require('./models/tvshow')(app, mongoose);
-// var TVShowCtrl = require('./controllers/tvshows');
-//var indexurl = require('./routes/index');
-var usersurl = require('./routes/tvshows');
+// Import Models
+var usersurl = require('./routes/users');
 
 // Example Route
 var router = express.Router();
 router.get('/', function(req, res) {
-  res.send("Hello world!");
+  res.send("Ready!");
 });
-//app.use(router);
 
 // API routes
-/*
-var tvshows = express.Router();
-
-tvshows.route('/tvshows')
-  .get(TVShowCtrl.findAllTVShows)
-  .post(TVShowCtrl.addTVShow);
-
-tvshows.route('/tvshows/:id')
-  .get(TVShowCtrl.findById)
-  .put(TVShowCtrl.updateTVShow)
-  .delete(TVShowCtrl.deleteTVShow);
-
-app.use('/api', tvshows);
-*/
-
-//app.use('/', indexurl);
-app.use('/api/tvshows', usersurl);
+app.use('/api/users', usersurl);
 
 // Start server
 app.listen(3200, function() {

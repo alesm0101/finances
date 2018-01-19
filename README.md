@@ -1,9 +1,9 @@
 # Info
 
-A simple API rest working with mongo and express
+A simple RESTful API working with mongo and express
 
 ## Dependencies:
-> to create:
+> To create the package.json:
 
 ```shell
 npm init
@@ -15,17 +15,48 @@ npm install body-parser --save-dev
 npm install method-override --save-dev
 ```
 
-> to install:
+> To install with package.json:
 
 ```shell
 npm install
 ```
+> Running Application
+
+Firt start the mongo service
+
+```shell
+mongod
+```
+
+or
+
+```shell
+mongod --port 27017
+```
+
+Then run the application
+
+```shell
+node app.js
+```
+
 ## Testing
 
-You can use restlet client for Chrome to test:
+You can use restlet client for Chrome to test using http://localhost:3200/api/myfinances/ as url:
 
-> Example:
+> Example POST:
 
+```shell
+{
+    "username": "admin",
+    "fullName": "Administrator",
+    "password": "123",
+    "email": "test@gmail.com",
+    "privileges": 1,
+    "defaultCurrency": "usd"
+}
 ```
-http://localhost:3200/api/myfinances/
-```
+
+It will be create a database called 'finances' and a collection 'users'
+
+To check if is working you can call again using the method GET.
