@@ -59,4 +59,11 @@ You can use restlet client for Chrome to test using http://localhost:3200/api/my
 
 It will be create a database called 'finances' and a collection 'users'
 
-To check if is working you can call again using the method GET.
+To check if it is working you can call again using the method GET.
+
+
+The API has suppport to PUT to update and DELETE to remove a specific document by id.
+
+Example url:
+
+>  http://localhost:3200/api/myfinances/5a61e4615931560ab674fda1
