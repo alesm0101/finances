@@ -1,6 +1,6 @@
 # RESTful API with MongoDB
 
-A simple **RESTful API** working with **MongoDB, Node and Express**
+A simple **RESTful API** working with **MongoDB, Node Mongoose and Express**
 
 ## Dependencies:
 **MONGODB** -> No SQL server.
@@ -64,12 +64,13 @@ You can use **Restlet Client** for Chrome to test using http://localhost:3200/ap
 
 ```shell
 {
-    "username": "admin",
-    "fullName": "Administrator",
-    "password": "123",
-    "email": "test@gmail.com",
-    "privileges": 1,
-    "defaultCurrency": "usd"
+    "username":"admin",
+    "fullName":"Administrator",
+    "password":"123",
+    "email":"test@gmail.com",
+    "privileges":1,
+    "defaultCurrency":"usd",
+    "preferencesShowSubcategories": true
 }
 ```
 
@@ -81,7 +82,7 @@ The API has suppport to PUT to update and DELETE to remove a specific document b
 > Example url:
 
 ```shell
-http://localhost:3200/api/myfinances/5a61e4615931560ab674fda1
+http://localhost:3200/api/users
 ```
 
 ## Credits

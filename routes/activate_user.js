@@ -17,7 +17,7 @@ var accountsData = require('../models/data/accounts_list'); // it return a a arr
 
 /* POST /todos */
 router.post('/', function(req, res, next) {
-        // validate defaultCurrency and userId
+        // validate defaultCurrency and userId and check before if categoriesListId or productsListId are created
         console.log(req.body);
         var userId = req.body.userId;
         var defaultCurrency = req.body.defaultCurrency;
