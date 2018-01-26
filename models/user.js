@@ -15,7 +15,7 @@ var schema = new mongoose.Schema({
         type: String,
         trim: true
      },
-     password: { 
+    password: { 
         type: String,
         trim: true,
         required: true
@@ -32,6 +32,7 @@ var schema = new mongoose.Schema({
     privileges: {
         type: Number,
         trim: true,
+        min: 0,
         default: 0
     },
     defaultCurrency: {
@@ -39,6 +40,22 @@ var schema = new mongoose.Schema({
         trim: true,
         required: true
     },
+    preferencesShowSubcategories: {
+        type: Boolean,
+        default: true
+    },
+    createdDate: {
+        type: Date,
+        default: Date.now
+    },
+    categoriesListId: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "categories",
+    },
+    productsListId: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "products",
+    }, 
     reg_time: {
         type: Date,
         default: Date.now
@@ -50,7 +67,11 @@ schema.path('username').validate(function (username) {
 });
 schema.path('password').validate(function (password) {
     return password.length > 2;
-});   
+});
+schema.path('defaultCurrency').validate(function (password) {
+    return password.length === 3;
+});
+
 module.exports = mongoose.model('users', schema); // name of the collection in lowercase
 
 /*
@@ -60,6 +81,7 @@ module.exports = mongoose.model('users', schema); // name of the collection in l
     "password":"123",
     "email":"test@gmail.com",
     "privileges":1,
-    "defaultCurrency":"usd"
+    "defaultCurrency":"usd",
+    "preferencesShowSubcategories": true
 }
  */
